@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  backend:
+    container_name: coffit-backend
+    image: suminjang/coffit
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
