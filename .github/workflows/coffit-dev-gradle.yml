@@ -25,8 +25,10 @@ jobs:
           distribution: 'temurin'
 
       # 체크아웃
-      - name: Checkout
+      - name: Checkout (with submodules)
         uses: actions/checkout@v3
+        with:
+          submodules: recursive
 
       # application.yml 생성
       - name: Create application.yml
@@ -59,7 +61,9 @@ jobs:
           username: ubuntu
           key: ${{ secrets.KEY }}
           script: |
+            cd ~/coffit-backend
             sudo docker rm -f $(docker ps -qa)
             sudo docker pull ${{ secrets.DOCKER_REPO }}
-            docker-compose up -d
+            docker-compose -f ci-cd/docker-compose.yml up -d
             docker image prune -f
+
