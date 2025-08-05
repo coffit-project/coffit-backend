@@ -5,6 +5,6 @@ services:
     container_name: coffit-backend
     build:
       context: .
-      dockerfile: ci-cd/Dockerfile
+      dockerfile: Dockerfile
     ports:
       - 8080:8080
