@@ -1,10 +1,17 @@
-spring.application.name=coffit-backend
+spring:
+  application:
+    name: coffit-backend
 
-spring.datasource.url=jdbc:mysql://coffit-database.ctkiq6aeimno.ap-northeast-2.rds.amazonaws.com:3306/coffit?serverTimezone=Asia/Seoul
-spring.datasource.username=root
-spring.datasource.password=coffit1234!
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+  datasource:
+    url: jdbc:mysql://coffit-database.ctkiq6aeimno.ap-northeast-2.rds.amazonaws.com:3306/coffit?serverTimezone=Asia/Seoul
+    username: root
+    password: coffit1234!
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.format_sql=true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
