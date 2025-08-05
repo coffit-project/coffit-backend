@@ -1,10 +1,10 @@
-version: "3" # 버전 지정
+version: "3"
 
-services: # 컨테이너 설정
+services:
   backend:
     container_name: coffit-backend
-    image: summinn9/coffit
-    expose:
-      - 8080
+    build:
+      context: .
+      dockerfile: ci-cd/Dockerfile
     ports:
       - 8080:8080
