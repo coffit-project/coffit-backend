@@ -25,8 +25,10 @@ jobs:
           distribution: 'temurin'
 
       # 체크아웃
-      - name: Checkout
+      - name: Checkout (with submodules)
         uses: actions/checkout@v3
+        with:
+          submodules: recursive
 
       # application.yml 생성
       - name: Create application.yml
