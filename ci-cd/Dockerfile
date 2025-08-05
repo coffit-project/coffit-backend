@@ -1,4 +1,3 @@
 FROM openjdk:17
-ARG JAR_FILE=build/libs/*jar
-COPY ${JAR_FILE} coffit.jar
+COPY build/libs/coffit-0.0.1-SNAPSHOT.jar coffit.jar
 ENTRYPOINT ["java", "-jar", "/coffit.jar"]
